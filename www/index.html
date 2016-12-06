@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <title>SUMATE</title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.3.2.min.css" />
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile.custom.min.js"></script><!-- v1.3.2-->
+    <link rel="stylesheet" type="text/css" href="css/estilo.css" />
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<body>
+    <div class="loading"></div>
+    <input type='hidden' name='idP' id='idP' value='0'>
+    <input type='hidden' name='id_usu' id='id_usu' value='0'>
+    <section data-role="page" id="inicio" class="pagina">
+        <article data-role="content" style="font-size:0;">
+            <div id="cont"></div>
+            <div class='tittle_form'>Sign Up</div>
+            <div class="logo_form"><img src="img/logo_sumate.png"></div>
+            <div class="login_caja"><input type="email" id="mail" name="mail" value="" placeholder="E-mail"></div>
+            <div class="login_caja"><input type="password" id="clave" name="clave" value="" placeholder="Contraseña"></div>
+            <!--<div class="center-wrapper">-->
+            <div class="cont_btn">
+                <div id="btn_login" data-role="button" data-theme="b" data-inline="true">INGRESAR</div>
+            </div>
+            <div class="center-wrapper">
+                <section class="main">
+                    <div class="bar">
+                        <i class="sphere"></i>
+                    </div>
+                </section>
+            </div>
+        </article>
+    </section>
+    <div data-role="page" id="principal" >
+        <div id="header-principal" data-role="header" class="header-design">
+            <div style="text-align:left; max-width:100%;font-size: 12px;" id="cab_logo"></div>
+            <div>
+                <p id="usu-nom-cab"></p>
+            </div>
+        </div>
+        <!--<div data-role="content" style="text-align:center;">  --> 
+        <div data-role="main" class="ui-content cuerpo-pagina" style="text-align:center;">
+            <!--<div id="debud_log" style="max-width:100%;"></div>-->
+            <div data-role="fieldcontain" class="cont-datos">
+                <!--<div class="tipo-marca">
+                    <fieldset data-role="controlgroup" data-mini="true" id="cont-radio" >
+                        <input type="radio" name="marca" id="marca-10" value="10"/>
+                        <label for="marca-10">ASISTENCIA</label>
+                        <input type="radio" name="marca" id="marca-11" value="11"/>
+                        <label for="marca-11">CITA</label>
+                    </fieldset>
+                </div>-->
+                <div class="tipo-marca">
+                    <input type="text" name="lugar" id="lugar" class="inp-all" placeholder="¿DONDE TE ENCUENTRAS?" />
+                </div>
+                <div id="fondo1_foto" class="cuadro_img">
+                    <div id="photo"><img src="img/btn_camara.png"></div>
+                </div>
+                <div id="mostrar-img" class="cuadro_img" style="display:none"></div>
+            </div>
+            <a id="marcar-asistencia" href="javascript:void(0)" data-role="button">MARCAR ASISTENCIA</a>
+        </div>
+        <!--<div id="prueba">PRUEBA</div>-->
+        <div data-role="popup" id="alertaPopup" data-overlay-theme="a" class="alert-popup">
+            <div class="icono-alerta-popup" id="logo-ap"> <img src=""> </div>
+            <div class="mensaje-alerta-popup" id="menasaje-ap"></div>
+            <div class="extra-alerta-popup" id="extra-ap">
+                <!--<div class="sector-infor-ap">
+                    <div class="ico-info-ap"></div>
+                    <div class="texto-izq-info-ap">Fecha</div>
+                    <div class="texto-der-info-ap">26 Febrero 2016</div>
+                </div>
+                <div class="sector-infor-ap">
+                    <div class="ico-info-ap"></div>
+                    <div class="texto-izq-info-ap">Hora</div>
+                    <div class="texto-der-info-ap">9:45 pm</div>
+                </div>-->
+            </div>
+            <div class="pie-alerta-popup"><div id="cerrar-popup">ACEPTAR</div></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDrsti2iY75NsnEAHWW-1OepuNVuQpTOFE&sensor=false"> </script>
+    <script type="text/javascript">
+        //app.initialize();
+    </script>
+</body>
+
+</html>
